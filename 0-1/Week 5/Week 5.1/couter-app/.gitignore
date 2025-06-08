@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# NO need package-lock.json (big-file)
+package-lock.json 
