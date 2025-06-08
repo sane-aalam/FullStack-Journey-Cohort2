@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <input id="textInput" type="text" onInput="debounce(handleInput, 500)" placeholder="Type something...">
+
+    <p id="displayText"></p>
+
+    <script>
+      // Debounce function to delay the execution of a function
+      function debounce(func, delay) {
+        let timeoutId;
+
+        return function() {
+          clearTimeout(timeoutId);
+
+          timeoutId = setTimeout(() => {
+            func.apply(this, arguments);
+          }, delay);
+        };
+      }
+
+      function handleInput() {
+        const inputValue = document.getElementById("textInput").value;
+
+        document.getElementById("displayText").innerText = "You typed: " + inputValue;
+
+        console.log("Request sent:", inputValue);
+      }
+    </script>
+  </body>
+</html>

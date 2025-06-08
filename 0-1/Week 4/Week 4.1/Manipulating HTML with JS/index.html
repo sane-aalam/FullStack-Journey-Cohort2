@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating HTML with JS</title>
+</head>
+<body>
+    <button id="simpleButton">Click me!</button>
+    <p id="output"></p>
+</body>
+<!-- added javascript -->
+ <script>
+    const simpleButton = document.getElementById("simpleButton");
+    const parentDivContainer = document.getElementById("output");
+    console.log(simpleButton,parentDivContainer);
+
+    // create new element paragraph
+    simpleButton.addEventListener('click',function(){
+        const element = document.createElement("p");
+        element.innerText = "This is tag created using javascipt";
+        parentDivContainer.append(element);
+    })
+ </script>
+</html>

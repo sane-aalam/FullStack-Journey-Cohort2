@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend connect with frontend</title>
+</head> 
+   <script>
+      // async-await 
+      async function populateDiv(){
+         const firstNumber = document.getElementById("firstNumber");
+         const secondNumber = document.getElementById("secondNumber");
+
+         // Make a fetch API call to the backend using async/await
+         const response = await fetch("https://sum-server.100xdevs.com/sum?a=" + firstNumber + "&b=" + secondNumber);
+         const ans = await response.text();
+         
+         // access the finalSum
+         let finalSum = document.getElementById('finalSum');
+         finalSum.textContent = ans;
+      }
+
+   </script>
+<body>
+    <input id="firstNumber" type="text" placeholder="First number"></input> <br></br>
+    <input id="secondNumber" type="text" placeholder="Second number"></input> <br></br>
+
+    <button onclick="populateDiv()">Calculate sum</button> <br></br>
+
+    <div id="finalSum"></div>
+</html>
+</body>
+</html>
