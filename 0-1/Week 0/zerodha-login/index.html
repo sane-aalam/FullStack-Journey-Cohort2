@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tailwind CLI Setup</title>
+    <link href="./dist/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="absolute w-3/12 p-12 bg-white my-36 mx-auto left-0 right-0 text-white bg-opacity-80 shadow-2xl"
+    >
+      <div class="flex flex-col gap-5 items-center justify-center">
+        <img
+          src="https://kite.zerodha.com/static/images/kite-logo.svg"
+          alt=""
+          class="w-20 border-5"
+        />
+        <h1 class="text-black text-center text-2xl">Login to Kite</h1>
+      </div>
+      <form action="" id="logform">
+        <input
+          type="text"
+          name=""
+          id="emailId"
+          placeholder="Email id"
+          class="p-3 my-4 border-2 w-full rounded bg-white border-1 border-gray text-black placeholder-gray-400 outline-black focus:ring-2 focus:ring-white"
+        />
+        <input
+          type="password"
+          name=""
+          id="passwordId"
+          placeholder="password"
+          class="p-3 border-2 w-full rounded bg-white-800 text-black placeholder-gay-400 outline-black focus:ring-2 focus:ring-white"
+        />
+        <button
+          id="logbut"
+          class="p-3 my-4 text-black w-full bg-[#F6461A] text-white"
+        >
+          login
+        </button>
+
+        <p class="text-gray-500 text-sm">Forgot user ID or password?</p>
+      </form>
+
+      <br />
+      <form name="login">
+        <p>
+          Email Address : <input type="text" name="EmailAddress" /> Password :
+          <input type="password" name="pword" />
+          <input type="button" value="Submit" onclick="ValidateUser()" />
+        </p>
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
