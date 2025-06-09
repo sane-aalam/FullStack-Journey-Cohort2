@@ -1,17 +1,15 @@
 {
-  "name": "todo-app",
+  "name": "todo-mern-app",
   "version": "1.0.0",
-  "description": "This is first project which is based on backend to frontend connection",
+  "description": "mern-stack-first-app",
   "keywords": [
     "javascript",
-    "react",
-    "node",
-    "express",
-    "mongodb"
+    "node.js",
+    "react.js"
   ],
   "repository": {
     "type": "git",
-    "url": "fullstack-journey-cohort2"
+    "url": "fullstack-journey-cohort2.0"
   },
   "license": "ISC",
   "author": "sane-aalam",
@@ -22,6 +20,7 @@
   },
   "dependencies": {
     "express": "^5.1.0",
+    "mongoose": "^8.15.1",
     "zod": "^3.25.56"
   },
   "devDependencies": {
