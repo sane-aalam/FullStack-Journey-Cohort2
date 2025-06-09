@@ -1,34 +1,14 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./dburl.js";
-import { DB_URL } from "./dburl.js";
+const mongoose = require("mongoose");
 
-const connectDB = async () =>{
-    try{
-        const connectionInstanceDB = await mongoose.connect(`${DB_URL}/${DB_NAME}`);
-         console.log(`\n MongoDB connected !! DB HOST: ${connectionInstanceDB.connection.host}`);
-    }catch(error){
-        console.log("MONGODB connection FAILED ", error);
-        process.exit(1)
-    }
-}
-
+mongoose.connect('mongodb+srv://saneraza78692:Z1fj9OAuuZXAMjAh@cluster0.kteciji.mongodb.net/');
+console.log("connected mongodb");
+      
 const todoSchema = mongoose.Schema({
-    title:{
-        type: String,
-        required: true,
-        trim: true
-  },
-    description: {
-            type: String,
-            required: true,
-            trim: true
-    },
-    completed:{
-        type:Boolean,
-        required:true
-    }
-    }
-  ,{
+    title:String,
+    description: String,
+    completed:Boolean
+}
+,{
         timestamps: true // Automatically adds createdAt and updatedAt fields
 })
 
