@@ -4,7 +4,6 @@ function TodoCard(props) {
 
   const {title,description,rating,genre,isTrending} = 
                                               props.movie;
-
   return (
     <div className="bg-white shadow-md rounded-2xl p-4 hover:shadow-lg transition duration-300 ease-in-out">
       <p className="text-2xl font-semibold text-gray-800">{title}</p>

@@ -40,9 +40,13 @@ function App() {
   );
 }
 
-// REACT.memo -
-// Wrapping the component with React.memo helps optimize performance by preventing unnecessary re-renders when props haven't changed
-
+// React.Memo -
+// Wrapping the component with React.memo helps optimize performance by preventing 
+// unnecessary re-renders when props haven't changed
+// React.memo is a higher-order component (HOC) used for optimizing functional components in React applications. 
+// It prevents unnecessary re-renders by memoizing the component, which means it caches the rendered output and 
+// only re-renders if the props have changed. This is particularly useful for components that receive
+//  the same props frequently but don't need to update unless those props change. 
 const MainPage = React.memo(function MainPage() {
   return (
     <div className="flex flex-col justify-center items-center bg-gray-100 p-6">
@@ -53,7 +57,6 @@ const MainPage = React.memo(function MainPage() {
     </div>
   );
 });
-
 
 const Todo = (props) => {
 
