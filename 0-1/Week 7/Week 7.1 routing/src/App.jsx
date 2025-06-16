@@ -17,6 +17,7 @@ const About = () =>{
     </div>
   )
 }
+
 const Card = () =>{
   return(
     <div>
